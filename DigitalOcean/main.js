@@ -112,6 +112,7 @@ class DigitalOceanProvider
 		 //console.log(response.statusCode);
 		 //console.log(response.body);
 
+
 		 if(response.statusCode == 202)
 		 {
 		 	//console.log(chalk.green(`Created droplet id ${response.body.droplet.id}`));
@@ -122,7 +123,7 @@ class DigitalOceanProvider
 		 console.log("Region: ",region);
 		 console.log("Image: ",imageName);
 
-
+		 await new Promise(resolve => setTimeout(resolve, 4000));
 
 		 if( typeof dropletId != "number" )
 		 {

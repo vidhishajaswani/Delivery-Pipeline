@@ -12,6 +12,7 @@ outfile.write(KeyPairOut)
 
 # Create Virtual Private Cloud
 vpc = ec2.create_vpc(CidrBlock='10.0.0.0/24')
+
 subnet = vpc.create_subnet(CidrBlock='10.0.0.0/25')
 gateway = ec2.create_internet_gateway()
 gateway.attach_to_vpc(VpcId=vpc.id)

@@ -51,6 +51,7 @@ ssh root@<ip-address>
 ## AWS EC2 Instance
 
 Documentation: [Amazon EC2](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/ec2-examples.html)
+
 Prerequisite: Python 3 version 3.3+
 
 1. For creating and running the instance we need AWS CLI installed. Refer this [link](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/ec2-examples.html) for installation.
@@ -70,6 +71,6 @@ ssh -i "aws-key.pem" ec2-user@<ip-address>
 ![aws](images/aws.png)
 
 ## Screencast
-[Screencast Link]()
+[Screencast Link](https://www.youtube.com/watch?v=MIscbkusUIo)
 
 **Thank you!**
