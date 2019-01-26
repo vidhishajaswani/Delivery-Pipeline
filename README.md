@@ -46,6 +46,8 @@ node main.js
 ssh root@<ip-address>
 ```
 
+9. To delete the instance, update the Droplet ID in line 244 of main.js. Comment out line 239 and uncomment line 264.
+
 ![digitalocean](images/digitalocean.png)
 
 ## AWS EC2 Instance
@@ -56,7 +58,7 @@ Prerequisite: Python 3 version 3.3+
 
 1. For creating and running the instance we need AWS CLI installed. Refer this [link](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/ec2-examples.html) for installation.
 
-1. Navigate to the folder where ```HW1-DevOps-ProvisioningServers/AWS``` and run ``` pip install -r requirements.txt ```
+1. Navigate to the folder where ```HW1-DevOps-ProvisioningServers/AWS``` and run ``` pip install -r requirements.txt --user ``` if you do not have boto3 installed already.
 
 2. Run ``` aws configure ``` where it will ask you to enter your Access Key ID and Secret Access Key. To get these keys refer this [link](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/ec2-examples.html)
 
@@ -67,6 +69,8 @@ Prerequisite: Python 3 version 3.3+
 chmod 400 aws-key.pem
 ssh -i "aws-key.pem" ec2-user@<ip-address>
 ```
+
+5. Finally, to delete the instance run, edit line 3 in delete.py to update the Instance ID  to be deleted and run ``` python delete.py```
 
 ![aws](images/aws.png)
 
